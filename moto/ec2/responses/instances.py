@@ -61,7 +61,7 @@ class InstanceResponse(BaseResponse):
             "private_ip": self._get_param("PrivateIpAddress"),
             "associate_public_ip": self._get_param("AssociatePublicIpAddress"),
             "tags": self._parse_tag_specification("TagSpecification"),
-        ebs_optimized = self._get_param("EbsOptimized") or False
+            "ebs_optimized": self._get_param("EbsOptimized") or False,
             "instance_initiated_shutdown_behavior": self._get_param(
                 "InstanceInitiatedShutdownBehavior"
             ),
